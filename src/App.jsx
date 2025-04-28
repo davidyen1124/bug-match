@@ -76,15 +76,12 @@ export default function BugMatchApp() {
   }, [expertise])
 
   const like = useCallback(() => {
-    if (matches.length === 0) {
-      confetti()
-    }
-
+    confetti()
     const bug = bugs[cursor]
     if (!bug) return
     setMatches((prev) => [...prev, { bug, status: "active" }])
     setCursor((c) => c + 1)
-  }, [cursor, bugs, matches])
+  }, [cursor, bugs])
 
   const skip = useCallback(() => setCursor((c) => c + 1), [])
 
