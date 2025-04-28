@@ -43,16 +43,6 @@ export default function BugMatchApp() {
       {/* Onboarding */}
       {expertise.length === 0 && <Onboarding onDone={setExpertise} />}
 
-      {/* Header */}
-      <header className="text-center space-y-1">
-        <h1 className="text-4xl font-extrabold tracking-tight">🐞 BugMatch</h1>
-        <p className="max-w-md text-sm mx-auto mt-2">
-          Swipe right to adopt a bug
-          <br />
-          swipe left to yeet it back into legacy code.
-        </p>
-      </header>
-
       {/* Card stack */}
       <CardStack bugs={bugs} cursor={cursor} onLike={like} onSkip={skip} />
 
