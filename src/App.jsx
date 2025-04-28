@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react"
-import { Button } from "@/components/ui/button"
 import Onboarding from "@/components/Onboarding"
 
 import CardStack from "@/components/CardStack"
 import ChatWindow from "@/components/ChatWindow"
+import ChatSheet from "@/components/ChatSheet"
 
 import { generateBugImage } from "@/utils/generateBugImage"
 
@@ -81,18 +81,16 @@ export default function BugMatchApp() {
   const like = useCallback(() => {
     const bug = bugs[cursor]
     if (!bug) return
-    const next = [...matches, { bug, status: "active" }]
-    setMatches(next)
+    setMatches((prev) => [...prev, { bug, status: "active" }])
     setCursor((c) => c + 1)
-  }, [cursor, bugs, matches])
+  }, [cursor, bugs])
 
   const skip = useCallback(() => setCursor((c) => c + 1), [])
 
   const resolveBug = (bug) => {
-    const next = matches.map((m) =>
-      m.bug.id === bug.id ? { ...m, status: "resolved" } : m
+    setMatches((m) =>
+      m.map((x) => (x.bug.id === bug.id ? { ...x, status: "resolved" } : x))
     )
-    setMatches(next)
   }
 
   const current = bugs[cursor]
@@ -115,77 +113,21 @@ export default function BugMatchApp() {
       {/* Card stack */}
       <CardStack bugs={bugs} cursor={cursor} onLike={like} onSkip={skip} />
 
-      {/* Matches drawer */}
-      {(activeMatches.length > 0 || resolvedMatches.length > 0) && (
-        <div className="w-full max-w-md bg-white/80 backdrop-blur rounded-2xl shadow p-4 flex flex-col gap-6">
-          {activeMatches.length > 0 && (
-            <section>
-              <h2 className="text-lg font-semibold mb-2">
-                Working On ({activeMatches.length})
-              </h2>
-              <ul className="space-y-2 max-h-48 overflow-y-auto pr-2">
-                {activeMatches.map((m) => (
-                  <li
-                    key={m.bug.id}
-                    className="flex items-center gap-3 bg-gray-100 rounded-lg p-2 hover:bg-gray-200"
-                  >
-                    <img
-                      src={m.bug.image}
-                      alt="avatar"
-                      className="w-10 h-10 rounded-full object-cover"
-                    />
-                    <span className="flex-1 text-sm font-medium">
-                      {m.bug.name}
-                    </span>
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      onClick={() => setChatting(m.bug)}
-                    >
-                      Chat
-                    </Button>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-          {resolvedMatches.length > 0 && (
-            <section>
-              <h2 className="text-lg font-semibold mb-2">
-                Resolved ({resolvedMatches.length})
-              </h2>
-              <ul className="space-y-2 max-h-48 overflow-y-auto pr-2">
-                {resolvedMatches.map((m) => (
-                  <li
-                    key={m.bug.id}
-                    className="flex items-center gap-3 bg-green-100 rounded-lg p-2"
-                  >
-                    <img
-                      src={m.bug.image}
-                      alt="avatar"
-                      className="w-10 h-10 rounded-full object-cover grayscale"
-                    />
-                    <span className="flex-1 text-sm line-through">
-                      {m.bug.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-        </div>
-      )}
+      {/* Bottom-sheet with matches & chat */}
+      <ChatSheet
+        activeMatches={activeMatches}
+        resolvedMatches={resolvedMatches}
+        onChat={(bug) => setChatting(bug)}
+      />
 
-      {/* Empty state */}
+      {/* Empty-state after all bugs triaged */}
       {!current && expertise.length > 0 && (
-        <div className="text-center space-y-3">
-          <p className="text-lg font-medium">
-            You've triaged all available bugs! 🎉
-          </p>
-        </div>
+        <p className="text-center text-lg font-medium">
+          You've triaged all available bugs! 🎉
+        </p>
       )}
 
-      {/* Chat overlay */}
+      {/* Chat overlay (higher z-index than the sheet) */}
       {chatting && (
         <ChatWindow
           bug={chatting}
