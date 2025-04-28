@@ -2,65 +2,52 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# one run per branch at a time
+concurrency:
+  group: pages-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
         with:
-          node-version: 20
+          fetch-depth: 1 # shallow clone = faster
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
           run_install: false
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: echo "STORE_PATH=$(pnpm store path)" >> "$GITHUB_OUTPUT"
-
-      - name: Setup pnpm cache
-        uses: actions/cache@v4
+      - name: Setup Node (20 LTS)
+        uses: actions/setup-node@v4
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
+          node-version: 20
+          cache: pnpm # built-in cache
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: vite
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        uses: actions/configure-pages@v4
 
       - name: Build
         run: pnpm build
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist # vite's default outDir
 
   deploy:
     needs: build
