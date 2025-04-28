@@ -2,53 +2,7 @@ import React, { useState, useEffect, useCallback } from "react"
 import Onboarding from "@/components/Onboarding"
 import CardStack from "@/components/CardStack"
 import ChatSheet from "@/components/ChatSheet"
-import { generateBugImage } from "@/utils/generateBugImage"
 import confetti from "canvas-confetti"
-
-const sampleBugs = [
-  {
-    id: "bug-001",
-    name: "MergeConflict Marty",
-    pickupLine:
-      "Mind if I rebase our future? No force-pushes… unless it's Friday 4:59 PM 🍻",
-    stats: {
-      Severity: 8,
-      Complexity: 6,
-      Reproducibility: 9,
-      Legacy: 5,
-      Priority: 8,
-    },
-    tags: ["backend", "java"],
-  },
-  {
-    id: "bug-002",
-    name: "Off-By-One Olivia",
-    pickupLine:
-      "I'm 90 % sure you're the missing semicolon; let's not discuss the other 10 %. #ItWorkedOnMyMachine",
-    stats: {
-      Severity: 4,
-      Complexity: 3,
-      Reproducibility: 7,
-      Legacy: 2,
-      Priority: 5,
-    },
-    tags: ["frontend", "javascript"],
-  },
-  {
-    id: "bug-003",
-    name: "ContainerLoop Carl",
-    pickupLine:
-      "How about a little Docker-inside-Docker date? We can keep spinning forever 🔄🐳",
-    stats: {
-      Severity: 9,
-      Complexity: 9,
-      Reproducibility: 4,
-      Legacy: 6,
-      Priority: 9,
-    },
-    tags: ["systems", "c++", "concurrency"],
-  },
-]
 
 export default function BugMatchApp() {
   const [expertise, setExpertise] = useState([])
@@ -58,16 +12,10 @@ export default function BugMatchApp() {
 
   useEffect(() => {
     ;(async () => {
-      const enriched = await Promise.all(
-        sampleBugs.map(async (b) => ({
-          ...b,
-          image: await generateBugImage(
-            `${b.name} cartoon bug, kawaii, flat vector, white background`
-          ),
-        }))
-      )
+      const res = await fetch("/bugs.json")
+      const bugs = await res.json()
 
-      const ranked = enriched.sort((a, b) => {
+      const ranked = bugs.sort((a, b) => {
         const score = (prof) =>
           prof.tags.filter((t) => expertise.includes(t)).length
         const diff = score(b) - score(a)

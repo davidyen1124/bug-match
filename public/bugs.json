@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Copilot Commitmentphobe",
+    "pickupLine": "Heard you like dependable partners—too bad my suggestions ghost harder than Copilot during merge conflicts.",
+    "stats": {
+      "Severity": 7,
+      "Complexity": 6,
+      "Reproducibility": 8,
+      "Legacy": 2,
+      "Priority": 7
+    },
+    "tags": [
+      "AI",
+      "GitHub",
+      "TypeScript",
+      "DevOps"
+    ],
+    "prompt": "quirky bug with pixelated hair and hoodie takes a selfie with laptop in a cozy café, code flying above their coffee mug, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "6563df2f-da78-45d9-9d1c-eeff3de93743",
+    "image": "/bug-images/6563df2f-da78-45d9-9d1c-eeff3de93743.png"
+  },
+  {
+    "name": "Quantum Queue Cutie",
+    "pickupLine": "If we ever meet IRL, odds are higher than quantum laptop shipping before 2030—so, basically zero. Wanna collapse our waveforms?",
+    "stats": {
+      "Severity": 5,
+      "Complexity": 9,
+      "Reproducibility": 3,
+      "Legacy": 1,
+      "Priority": 4
+    },
+    "tags": [
+      "Quantum",
+      "Python",
+      "FutureTech"
+    ],
+    "prompt": "glitchy bug floating with futuristic hiking gear, neon backpack, quantum circuits spiral in the misty valley backdrop, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "4a98fd3f-55dd-4d4e-bada-e6287d4652aa",
+    "image": "/bug-images/4a98fd3f-55dd-4d4e-bada-e6287d4652aa.png"
+  },
+  {
+    "name": "Rusty Heartbreaker",
+    "pickupLine": "I’ll ‘borrow’ your time and never give it back—strict ownership rules, but my problems? Totally your crash.",
+    "stats": {
+      "Severity": 6,
+      "Complexity": 8,
+      "Reproducibility": 5,
+      "Legacy": 2,
+      "Priority": 6
+    },
+    "tags": [
+      "Rust",
+      "Systems",
+      "Concurrency"
+    ],
+    "prompt": "animated bug in flannel, posing on a mountaintop with a hiking staff made of rusted metal, forest vista below, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "a9623a45-d1f4-4884-902d-dc8c2a1df687",
+    "image": "/bug-images/a9623a45-d1f4-4884-902d-dc8c2a1df687.png"
+  },
+  {
+    "name": "K8s Kloset Skeleton",
+    "pickupLine": "Like your cloud bill, I’ll haunt your wallet and mysteries long after you thought you deleted me. Ready for a FinOps confession?",
+    "stats": {
+      "Severity": 8,
+      "Complexity": 7,
+      "Reproducibility": 7,
+      "Legacy": 4,
+      "Priority": 9
+    },
+    "tags": [
+      "Kubernetes",
+      "Cloud",
+      "FinOps",
+      "Containers"
+    ],
+    "prompt": "bug with a cluster-shaped backpack, sipping overpriced coffee on a rooftop next to cloud-shaped pillows, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "1b5fcd8f-4ea2-4e1e-8ee3-263cb8595c2a",
+    "image": "/bug-images/1b5fcd8f-4ea2-4e1e-8ee3-263cb8595c2a.png"
+  },
+  {
+    "name": "VisionPro Mirage",
+    "pickupLine": "I’m like your Vision Pro budget—expensive and gone before you know it… but at least I won’t fog up your glasses.",
+    "stats": {
+      "Severity": 5,
+      "Complexity": 5,
+      "Reproducibility": 6,
+      "Legacy": 1,
+      "Priority": 5
+    },
+    "tags": [
+      "Apple",
+      "VisionPro",
+      "AR",
+      "Swift"
+    ],
+    "prompt": "sleek bug in shiny AR headset, taking a gym mirror selfie surrounded by floating UI elements and virtual pets, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "74e62c7d-ba75-425b-a1ce-0af77714c7cb",
+    "image": "/bug-images/74e62c7d-ba75-425b-a1ce-0af77714c7cb.png"
+  }
+]
