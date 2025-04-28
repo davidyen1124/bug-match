@@ -12,7 +12,7 @@ export default function BugMatchApp() {
 
   useEffect(() => {
     ;(async () => {
-      const res = await fetch("/bugs.json")
+      const res = await fetch("/bug-match/bugs.json")
       const bugs = await res.json()
 
       const ranked = bugs.sort((a, b) => {
