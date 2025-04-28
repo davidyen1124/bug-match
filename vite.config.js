@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/bug-tinder/",
+  base: "/bug-match/",
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
