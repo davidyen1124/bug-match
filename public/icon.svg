@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8b4fe"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Body -->
+  <circle cx="32" cy="36" r="18" fill="url(#bg)" stroke="#322653" stroke-width="2" />
+  <!-- Head -->
+  <circle cx="32" cy="20" r="10" fill="#f7f3ff" stroke="#322653" stroke-width="2" />
+  <!-- Legs -->
+  <line x1="16" y1="32" x2="4" y2="28" stroke="#322653" stroke-width="2" />
+  <line x1="16" y1="40" x2="4" y2="44" stroke="#322653" stroke-width="2" />
+  <line x1="48" y1="32" x2="60" y2="28" stroke="#322653" stroke-width="2" />
+  <line x1="48" y1="40" x2="60" y2="44" stroke="#322653" stroke-width="2" />
+  <!-- Antennae -->
+  <line x1="26" y1="12" x2="22" y2="4" stroke="#322653" stroke-width="2" />
+  <line x1="38" y1="12" x2="42" y2="4" stroke="#322653" stroke-width="2" />
+  <!-- Heart -->
+  <path d="M32 35
+           c-3-5-14-5-14 4
+           c0 7 14 14 14 14
+           c0 0 14-7 14-14
+           c0-9-11-9-14-4z" fill="#f72585"/>
+</svg>

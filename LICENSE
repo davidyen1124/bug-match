@@ -1,0 +1,55 @@
+───────────────────────────────────────────────────────────────
+        BUGMATCH SUPER-CHILL PUBLIC LICENSE  v0.0.1
+        (“Because rules are just comments anyway”)
+───────────────────────────────────────────────────────────────
+
+Preamble
+--------
+You found some code. Cool. This license exists mainly
+to fill that awkward empty spot in your repo and to give
+the lawyers heartburn. Read on if you must, but honestly
+nothing here will stop you from doing whatever you were
+already planning to do.
+
+1. Unlimited Permission to Do Stuff
+-----------------------------------
+You may, free of charge and without asking our mom:
+•   use, copy, fork, modify, merge, publish, distribute,
+    sub-license, sell, rent, fold into a papier-mâché swan,
+    or leave running on a Raspberry Pi in a dark closet.
+•   Basically anything, forever, in any jurisdiction,
+    real or simulated.
+
+2. Attribution?
+---------------
+Nah, but if you shout us out on Twitter/X/Mastodon/
+Carrier-Pigeon we’ll send you a virtual high-five.  
+Totally optional, mildly appreciated.
+
+3. No Warranty, No Refunds, No Regrets
+--------------------------------------
+The code is provided “AS IS,” “WITH ALL FAULTS,” and
+occasionally “ON FIRE.”  
+If it bricks your laptop, summons eldritch DevOps demons,
+or causes the heat-death of your sprint velocity, that’s
+on you, champ.
+
+4. Liability
+------------
+By using this code you agree we owe you absolutely
+nothing—no fixes, no support, no emotional validation.
+(We’re developers, we barely validate our own feelings.)
+
+5. Compiler Optimizations
+-------------------------
+None detected. Proceed accordingly.
+
+Closing Haiku
+-------------
+    Merge the pull request,
+    Bugs and features intertwined—
+    Git blame laughs softly.
+
+───────────────────────────────────────────────────────────────
+Cut here, paste into repo, pretend you read the whole thing.
+Happy bug-flirting! 🐞

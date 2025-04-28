@@ -99,7 +99,9 @@ export default function BugMatchApp() {
       <header className="text-center space-y-1">
         <h1 className="text-4xl font-extrabold tracking-tight">🐞 BugMatch</h1>
         <p className="max-w-md text-sm mx-auto mt-2">
-          Swipe right to pick up a bug or swipe left to skip.
+          Swipe right to adopt a bug
+          <br />
+          swipe left to yeet it back into legacy code.
         </p>
       </header>
 
@@ -112,7 +114,10 @@ export default function BugMatchApp() {
       {/* Empty-state after all bugs triaged */}
       {!current && expertise.length > 0 && (
         <p className="text-center text-lg font-medium">
-          Catalogue cleared—go touch grass while the CI pipeline cries. 🎉
+          Backlog obliterated
+          <br />
+          go touch grass while the build server sobs quietly into its build
+          logs. 🎉
         </p>
       )}
     </div>
