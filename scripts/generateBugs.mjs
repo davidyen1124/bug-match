@@ -117,7 +117,7 @@ for (const bug of bugs) {
   bug.id = uuidv4()
 
   const imgName = `${bug.id}.png`
-  bug.image = `/bug-images/${imgName}`
+  bug.image = `/bug-match/bug-images/${imgName}`
 
   const { data } = await openai.images.generate({
     model: "gpt-image-1",

@@ -17,7 +17,7 @@
     ],
     "prompt": "quirky bug with pixelated hair and hoodie takes a selfie with laptop in a cozy café, code flying above their coffee mug, dreamy Studio Ghibli, bright pastels, cinematic lighting",
     "id": "6563df2f-da78-45d9-9d1c-eeff3de93743",
-    "image": "/bug-images/6563df2f-da78-45d9-9d1c-eeff3de93743.png"
+    "image": "/bug-match/bug-images/6563df2f-da78-45d9-9d1c-eeff3de93743.png"
   },
   {
     "name": "Quantum Queue Cutie",
@@ -36,7 +36,7 @@
     ],
     "prompt": "glitchy bug floating with futuristic hiking gear, neon backpack, quantum circuits spiral in the misty valley backdrop, dreamy Studio Ghibli, bright pastels, cinematic lighting",
     "id": "4a98fd3f-55dd-4d4e-bada-e6287d4652aa",
-    "image": "/bug-images/4a98fd3f-55dd-4d4e-bada-e6287d4652aa.png"
+    "image": "/bug-match/bug-images/4a98fd3f-55dd-4d4e-bada-e6287d4652aa.png"
   },
   {
     "name": "Rusty Heartbreaker",
@@ -55,7 +55,7 @@
     ],
     "prompt": "animated bug in flannel, posing on a mountaintop with a hiking staff made of rusted metal, forest vista below, dreamy Studio Ghibli, bright pastels, cinematic lighting",
     "id": "a9623a45-d1f4-4884-902d-dc8c2a1df687",
-    "image": "/bug-images/a9623a45-d1f4-4884-902d-dc8c2a1df687.png"
+    "image": "/bug-match/bug-images/a9623a45-d1f4-4884-902d-dc8c2a1df687.png"
   },
   {
     "name": "K8s Kloset Skeleton",
@@ -75,7 +75,7 @@
     ],
     "prompt": "bug with a cluster-shaped backpack, sipping overpriced coffee on a rooftop next to cloud-shaped pillows, dreamy Studio Ghibli, bright pastels, cinematic lighting",
     "id": "1b5fcd8f-4ea2-4e1e-8ee3-263cb8595c2a",
-    "image": "/bug-images/1b5fcd8f-4ea2-4e1e-8ee3-263cb8595c2a.png"
+    "image": "/bug-match/bug-images/1b5fcd8f-4ea2-4e1e-8ee3-263cb8595c2a.png"
   },
   {
     "name": "VisionPro Mirage",
@@ -95,6 +95,6 @@
     ],
     "prompt": "sleek bug in shiny AR headset, taking a gym mirror selfie surrounded by floating UI elements and virtual pets, dreamy Studio Ghibli, bright pastels, cinematic lighting",
     "id": "74e62c7d-ba75-425b-a1ce-0af77714c7cb",
-    "image": "/bug-images/74e62c7d-ba75-425b-a1ce-0af77714c7cb.png"
+    "image": "/bug-match/bug-images/74e62c7d-ba75-425b-a1ce-0af77714c7cb.png"
   }
 ]
