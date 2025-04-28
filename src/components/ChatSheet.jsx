@@ -87,7 +87,7 @@ export default function ChatSheet({ activeMatches }) {
       {view === "list" ? (
         <ChatList matches={activeMatches} onSelect={enterChat} />
       ) : (
-        <ChatThread />
+        chatBug && <ChatThread key={chatBug.id} bug={chatBug} />
       )}
     </Motion.div>
   )
