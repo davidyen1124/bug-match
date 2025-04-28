@@ -3,6 +3,7 @@ import Onboarding from "@/components/Onboarding"
 import CardStack from "@/components/CardStack"
 import ChatSheet from "@/components/ChatSheet"
 import { generateBugImage } from "@/utils/generateBugImage"
+import confetti from "canvas-confetti"
 
 const sampleBugs = [
   {
@@ -75,11 +76,15 @@ export default function BugMatchApp() {
   }, [expertise])
 
   const like = useCallback(() => {
+    if (matches.length === 0) {
+      confetti()
+    }
+
     const bug = bugs[cursor]
     if (!bug) return
     setMatches((prev) => [...prev, { bug, status: "active" }])
     setCursor((c) => c + 1)
-  }, [cursor, bugs])
+  }, [cursor, bugs, matches])
 
   const skip = useCallback(() => setCursor((c) => c + 1), [])
 
