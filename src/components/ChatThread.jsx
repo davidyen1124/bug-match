@@ -3,12 +3,12 @@ import { Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const PLACEHOLDERS = [
-  "Spill the debug tea… ☕️🐞",
-  "Seduce me with your stack trace… 📜💔",
-  "Got logs? Gimme the gory deets… 🤓",
-  "Tell me how to make it crash & burn… 🔥",
-  "Whisper your repro ritual… 🪄✨",
-  "Confess your null-pointer sins… 🙏",
+  "Drop your stack trace like it's hot… 🔥📜",
+  "Slide your Friday 4:59 PM push here… ⏰🤞",
+  "Got logs? Let's doom-scroll together… 🐈‍⬛",
+  "Whisper your flakiest test secrets… 🌧️",
+  "Confess your `sudo chmod -R 777` sins… 🫣",
+  "Tell me the tale of Docker-inside-Docker… 🐳🔃",
 ]
 
 export default function ChatThread() {

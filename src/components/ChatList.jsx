@@ -3,9 +3,13 @@ export default function ChatList({ matches, onSelect }) {
     <>
       <div className="overflow-y-auto flex-1 px-4 pb-[env(safe-area-inset-bottom)]">
         {matches.length === 0 ? (
-          <p className="text-center text-sm mt-8 text-gray-500">
-            No active matches
-          </p>
+          <div className="flex flex-col items-center justify-center h-full">
+            <p className="text-center text-sm text-gray-500">
+              No active matches
+              <br />
+              just like my unit tests on a Friday deploy 🚀
+            </p>
+          </div>
         ) : (
           <ul className="space-y-2 mt-2">
             {matches.map((m) => (

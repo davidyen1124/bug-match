@@ -8,9 +8,9 @@ import confetti from "canvas-confetti"
 const sampleBugs = [
   {
     id: "bug-001",
-    name: "NullPointer Nelly",
+    name: "MergeConflict Marty",
     pickupLine:
-      "Are you an uninitialized variable? Because my world crashes without you 💥",
+      "Mind if I rebase our future? No force-pushes… unless it's Friday 4:59 PM 🍻",
     stats: {
       Severity: 8,
       Complexity: 6,
@@ -23,7 +23,8 @@ const sampleBugs = [
   {
     id: "bug-002",
     name: "Off-By-One Olivia",
-    pickupLine: "I may be off by one, but you're the one for me ✨",
+    pickupLine:
+      "I'm 90 % sure you're the missing semicolon; let's not discuss the other 10 %. #ItWorkedOnMyMachine",
     stats: {
       Severity: 4,
       Complexity: 3,
@@ -35,8 +36,9 @@ const sampleBugs = [
   },
   {
     id: "bug-003",
-    name: "Race-Condition Ron",
-    pickupLine: "Let's go parallel—we'll sync later 😉",
+    name: "ContainerLoop Carl",
+    pickupLine:
+      "How about a little Docker-inside-Docker date? We can keep spinning forever 🔄🐳",
     stats: {
       Severity: 9,
       Complexity: 9,
@@ -110,7 +112,7 @@ export default function BugMatchApp() {
       {/* Empty-state after all bugs triaged */}
       {!current && expertise.length > 0 && (
         <p className="text-center text-lg font-medium">
-          You've triaged all available bugs! 🎉
+          Catalogue cleared—go touch grass while the CI pipeline cries. 🎉
         </p>
       )}
     </div>
