@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react"
 import Onboarding from "@/components/Onboarding"
-
 import CardStack from "@/components/CardStack"
-import ChatWindow from "@/components/ChatWindow"
 import ChatSheet from "@/components/ChatSheet"
-
 import { generateBugImage } from "@/utils/generateBugImage"
 
 const sampleBugs = [
@@ -55,7 +52,6 @@ export default function BugMatchApp() {
   const [bugs, setBugs] = useState([])
   const [cursor, setCursor] = useState(0)
   const [matches, setMatches] = useState([])
-  const [chatting, setChatting] = useState(null)
 
   useEffect(() => {
     ;(async () => {
@@ -87,15 +83,8 @@ export default function BugMatchApp() {
 
   const skip = useCallback(() => setCursor((c) => c + 1), [])
 
-  const resolveBug = (bug) => {
-    setMatches((m) =>
-      m.map((x) => (x.bug.id === bug.id ? { ...x, status: "resolved" } : x))
-    )
-  }
-
   const current = bugs[cursor]
   const activeMatches = matches.filter((m) => m.status === "active")
-  const resolvedMatches = matches.filter((m) => m.status === "resolved")
 
   return (
     <div className="bg-gradient-to-br from-purple-100 to-blue-100 fixed inset-0 overflow-auto flex flex-col items-center p-4 gap-8">
@@ -114,26 +103,13 @@ export default function BugMatchApp() {
       <CardStack bugs={bugs} cursor={cursor} onLike={like} onSkip={skip} />
 
       {/* Bottom-sheet with matches & chat */}
-      <ChatSheet
-        activeMatches={activeMatches}
-        resolvedMatches={resolvedMatches}
-        onChat={(bug) => setChatting(bug)}
-      />
+      <ChatSheet activeMatches={activeMatches} />
 
       {/* Empty-state after all bugs triaged */}
       {!current && expertise.length > 0 && (
         <p className="text-center text-lg font-medium">
           You've triaged all available bugs! 🎉
         </p>
-      )}
-
-      {/* Chat overlay (higher z-index than the sheet) */}
-      {chatting && (
-        <ChatWindow
-          bug={chatting}
-          onClose={() => setChatting(null)}
-          onResolve={resolveBug}
-        />
       )}
     </div>
   )
