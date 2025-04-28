@@ -1,100 +1,193 @@
 [
   {
-    "name": "Copilot Commitmentphobe",
-    "pickupLine": "Heard you like dependable partners—too bad my suggestions ghost harder than Copilot during merge conflicts.",
+    "name": "VisionPro Void",
+    "pickupLine": "Is your AR demo crashing, or are you just happy to see me? Either way, your app’s in spatial limbo with me around.",
     "stats": {
-      "Severity": 7,
+      "Severity": 8,
       "Complexity": 6,
-      "Reproducibility": 8,
+      "Reproducibility": 7,
       "Legacy": 2,
-      "Priority": 7
+      "Priority": 9
     },
     "tags": [
-      "AI",
-      "GitHub",
-      "TypeScript",
-      "DevOps"
+      "Swift",
+      "ARKit",
+      "VisionOS",
+      "XR"
     ],
-    "prompt": "quirky bug with pixelated hair and hoodie takes a selfie with laptop in a cozy café, code flying above their coffee mug, dreamy Studio Ghibli, bright pastels, cinematic lighting",
-    "id": "6563df2f-da78-45d9-9d1c-eeff3de93743",
-    "image": "/bug-match/bug-images/6563df2f-da78-45d9-9d1c-eeff3de93743.png"
-  },
-  {
-    "name": "Quantum Queue Cutie",
-    "pickupLine": "If we ever meet IRL, odds are higher than quantum laptop shipping before 2030—so, basically zero. Wanna collapse our waveforms?",
-    "stats": {
-      "Severity": 5,
-      "Complexity": 9,
-      "Reproducibility": 3,
-      "Legacy": 1,
-      "Priority": 4
-    },
-    "tags": [
-      "Quantum",
-      "Python",
-      "FutureTech"
-    ],
-    "prompt": "glitchy bug floating with futuristic hiking gear, neon backpack, quantum circuits spiral in the misty valley backdrop, dreamy Studio Ghibli, bright pastels, cinematic lighting",
-    "id": "4a98fd3f-55dd-4d4e-bada-e6287d4652aa",
-    "image": "/bug-match/bug-images/4a98fd3f-55dd-4d4e-bada-e6287d4652aa.png"
+    "prompt": "a bug wearing an oversized AR headset, trying to take a hiking selfie but walking straight into a tree, digital glitches swirling, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "51b8ee5a-0578-443d-9d17-ed53f9696805",
+    "image": "/bug-match/bug-images/51b8ee5a-0578-443d-9d17-ed53f9696805.png"
   },
   {
     "name": "Rusty Heartbreaker",
-    "pickupLine": "I’ll ‘borrow’ your time and never give it back—strict ownership rules, but my problems? Totally your crash.",
+    "pickupLine": "Let’s rewrite our histories—in Rust—then break up with unsafe exes. Ownership rules got nothing on my commitment issues.",
     "stats": {
-      "Severity": 6,
+      "Severity": 7,
       "Complexity": 8,
-      "Reproducibility": 5,
-      "Legacy": 2,
+      "Reproducibility": 4,
+      "Legacy": 1,
       "Priority": 6
     },
     "tags": [
       "Rust",
       "Systems",
-      "Concurrency"
+      "Memory Safety"
     ],
-    "prompt": "animated bug in flannel, posing on a mountaintop with a hiking staff made of rusted metal, forest vista below, dreamy Studio Ghibli, bright pastels, cinematic lighting",
-    "id": "a9623a45-d1f4-4884-902d-dc8c2a1df687",
-    "image": "/bug-match/bug-images/a9623a45-d1f4-4884-902d-dc8c2a1df687.png"
+    "prompt": "adorable bug chef in an apron, cooking up ‘hello, world’ on a stovetop with rusty utensils, studio kitchen background, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "dca7497e-7ef5-457c-bd8a-ffea4cd120a3",
+    "image": "/bug-match/bug-images/dca7497e-7ef5-457c-bd8a-ffea4cd120a3.png"
   },
   {
-    "name": "K8s Kloset Skeleton",
-    "pickupLine": "Like your cloud bill, I’ll haunt your wallet and mysteries long after you thought you deleted me. Ready for a FinOps confession?",
+    "name": "Copilot Jealousy Loop",
+    "pickupLine": "I saw your side-eye when GPT-6-Lite autocompleted your code—should I be jealous, or just fork and peace out?",
+    "stats": {
+      "Severity": 6,
+      "Complexity": 7,
+      "Reproducibility": 5,
+      "Legacy": 2,
+      "Priority": 8
+    },
+    "tags": [
+      "AI",
+      "GitHub Copilot",
+      "Python"
+    ],
+    "prompt": "bug with heart-shaped glasses, sipping coffee in a trendy café, eyeing a rival AI bug at the next table, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "293a194a-2480-4a09-a2fc-8fd425fba7e1",
+    "image": "/bug-match/bug-images/293a194a-2480-4a09-a2fc-8fd425fba7e1.png"
+  },
+  {
+    "name": "KubeCost Mirage",
+    "pickupLine": "Our cloud bill escalates faster than your LinkedIn ‘open to work’ status. Let’s go serverless—emotionally.",
     "stats": {
       "Severity": 8,
       "Complexity": 7,
       "Reproducibility": 7,
-      "Legacy": 4,
-      "Priority": 9
+      "Legacy": 3,
+      "Priority": 10
     },
     "tags": [
       "Kubernetes",
-      "Cloud",
       "FinOps",
-      "Containers"
+      "Cloud"
     ],
-    "prompt": "bug with a cluster-shaped backpack, sipping overpriced coffee on a rooftop next to cloud-shaped pillows, dreamy Studio Ghibli, bright pastels, cinematic lighting",
-    "id": "1b5fcd8f-4ea2-4e1e-8ee3-263cb8595c2a",
-    "image": "/bug-match/bug-images/1b5fcd8f-4ea2-4e1e-8ee3-263cb8595c2a.png"
+    "prompt": "roguish bug in hiking gear at the summit, clutching a cloud-shaped balloon with a massive price tag, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "d597f66c-89e5-4b37-a352-6e3129f563e7",
+    "image": "/bug-match/bug-images/d597f66c-89e5-4b37-a352-6e3129f563e7.png"
   },
   {
-    "name": "VisionPro Mirage",
-    "pickupLine": "I’m like your Vision Pro budget—expensive and gone before you know it… but at least I won’t fog up your glasses.",
+    "name": "Quantum FOMO",
+    "pickupLine": "I’ll show up when the quantum laptop ships—so, basically never. But hey, Schrödinger’s DMs are still open.",
     "stats": {
       "Severity": 5,
-      "Complexity": 5,
+      "Complexity": 9,
+      "Reproducibility": 1,
+      "Legacy": 2,
+      "Priority": 4
+    },
+    "tags": [
+      "Quantum Computing",
+      "Futurism",
+      "Vaporware"
+    ],
+    "prompt": "futuristic bug with glowing goggles, taking a selfie in front of a mysterious, unopened laptop box, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "252c1b00-f54f-4cde-ab8d-407ae5db0a62",
+    "image": "/bug-match/bug-images/252c1b00-f54f-4cde-ab8d-407ae5db0a62.png"
+  },
+  {
+    "name": "Infinite LLM Recursion",
+    "pickupLine": "We matched... then I replied to myself 46 times. Blame my prompt engineering, not my emotional baggage.",
+    "stats": {
+      "Severity": 7,
+      "Complexity": 10,
       "Reproducibility": 6,
-      "Legacy": 1,
+      "Legacy": 2,
+      "Priority": 7
+    },
+    "tags": [
+      "AI",
+      "LLM",
+      "Prompt Engineering"
+    ],
+    "prompt": "bug at a cozy kitchen table, surrounded by endless stacks of reply notes, sipping tea, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "27cd7475-0a3e-4195-a4a3-13f43ac83ac5",
+    "image": "/bug-match/bug-images/27cd7475-0a3e-4195-a4a3-13f43ac83ac5.png"
+  },
+  {
+    "name": "React Suspense Ghost",
+    "pickupLine": "Ghosted your UI like React’s Suspense—now you’ll never know if I was loading, or just lazy.",
+    "stats": {
+      "Severity": 7,
+      "Complexity": 6,
+      "Reproducibility": 8,
+      "Legacy": 3,
+      "Priority": 8
+    },
+    "tags": [
+      "React",
+      "JavaScript",
+      "Frontend"
+    ],
+    "prompt": "mischievous bug peeking from behind a half-drawn curtain, fake loading spinner in hand, living room selfie, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "15230eaf-6068-4b4d-a602-2114be1c64f6",
+    "image": "/bug-match/bug-images/15230eaf-6068-4b4d-a602-2114be1c64f6.png"
+  },
+  {
+    "name": "Legacy COBOL Flame",
+    "pickupLine": "You like ‘em old? My passion burns brighter than a mainframe during Y2K. Let’s see if your heart handles legacy love.",
+    "stats": {
+      "Severity": 6,
+      "Complexity": 5,
+      "Reproducibility": 9,
+      "Legacy": 9,
       "Priority": 5
     },
     "tags": [
-      "Apple",
-      "VisionPro",
-      "AR",
-      "Swift"
+      "COBOL",
+      "Mainframe",
+      "Enterprise"
     ],
-    "prompt": "sleek bug in shiny AR headset, taking a gym mirror selfie surrounded by floating UI elements and virtual pets, dreamy Studio Ghibli, bright pastels, cinematic lighting",
-    "id": "74e62c7d-ba75-425b-a1ce-0af77714c7cb",
-    "image": "/bug-match/bug-images/74e62c7d-ba75-425b-a1ce-0af77714c7cb.png"
+    "prompt": "vintage bug in retro business attire, posing by a dusty mainframe, winking for the camera, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "1abd7db5-ebf3-4f27-bc18-84312a3e3a31",
+    "image": "/bug-match/bug-images/1abd7db5-ebf3-4f27-bc18-84312a3e3a31.png"
+  },
+  {
+    "name": "NoSQL Swipe Left",
+    "pickupLine": "I don’t do relationships, just key-value pairings. Sorry, it’s not you—it’s my eventual consistency.",
+    "stats": {
+      "Severity": 4,
+      "Complexity": 4,
+      "Reproducibility": 7,
+      "Legacy": 2,
+      "Priority": 3
+    },
+    "tags": [
+      "NoSQL",
+      "Databases",
+      "MongoDB"
+    ],
+    "prompt": "hipster bug chilling at a street café, nonchalantly swiping left on a phone, coffee mug in hand, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "3fd8f20d-5456-4fb1-be4c-c785c1f219db",
+    "image": "/bug-match/bug-images/3fd8f20d-5456-4fb1-be4c-c785c1f219db.png"
+  },
+  {
+    "name": "Flutter Driftydate",
+    "pickupLine": "Let’s cross-platform our feelings—once my widgets stop drifting like a Tinder bio after last call.",
+    "stats": {
+      "Severity": 5,
+      "Complexity": 6,
+      "Reproducibility": 6,
+      "Legacy": 2,
+      "Priority": 6
+    },
+    "tags": [
+      "Flutter",
+      "Mobile Apps",
+      "Dart"
+    ],
+    "prompt": "bug with painter’s hat, taking a mirror selfie mid-app-design, paint splatters everywhere, dreamy Studio Ghibli, bright pastels, cinematic lighting",
+    "id": "4f5a134e-955c-4a47-843b-479d49466ae4",
+    "image": "/bug-match/bug-images/4f5a134e-955c-4a47-843b-479d49466ae4.png"
   }
 ]
