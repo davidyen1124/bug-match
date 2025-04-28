@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 
 function BugCard({ bug }) {
   return (
-    <Card className="w-full max-w-md h-[600px] bg-white rounded-2xl shadow-xl overflow-hidden">
+    <Card className="w-full max-w-md  bg-white rounded-2xl shadow-xl overflow-hidden">
       <CardContent className="flex flex-col gap-3 flex-1">
         <img
           src={bug.image}
