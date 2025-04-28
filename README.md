@@ -2,7 +2,7 @@
 
 _Swipe right to adopt a bug—swipe left to yeet it back into legacy code._
 
-![BugMatch screenshot](./docs/screenshot.gif)
+![BugMatch screenshot](./docs/screenshot.png)
 
 ---
 
