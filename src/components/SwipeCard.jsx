@@ -1,45 +1,84 @@
-import React from "react";
-import { motion, useMotionValue } from "framer-motion";
-import BugCard from "@/components/BugCard";
+import {
+  motion as Motion,
+  useMotionValue,
+  useTransform,
+  animate as motionAnimate,
+} from "framer-motion"
+import useSwipeThreshold from "@/hooks/useSwipeThreshold"
+import BugCard from "@/components/BugCard"
 
-/**
- * @param {{
- *   bug: import("../App").BugProfile,
- *   isTop: boolean,
- *   depth: number,
- *   scale: number,
- *   yOffset: number,
- *   onLike: () => void,
- *   onSkip: () => void
- * }} props
- */
-function SwipeCard({ bug, isTop, depth, scale, yOffset, onLike, onSkip }) {
-  const rotate = useMotionValue(0);
+export default function SwipeCard({
+  bug,
+  isTop,
+  depth,
+  scale,
+  yOffset,
+  onLike,
+  onSkip,
+}) {
+  const threshold = useSwipeThreshold()
 
-  const handleDragEnd = (_, info) => {
-    if (!isTop) return;
-    if (info.offset.x > 120) onLike();
-    else if (info.offset.x < -120) onSkip();
-    else rotate.set(0);
-  };
+  const x = useMotionValue(0)
+  const y = useMotionValue(yOffset)
+  const rotate = useTransform(x, [-threshold, 0, threshold], [-15, 0, 15])
+  const opacity = useTransform(
+    x,
+    [-threshold * 1.5, 0, threshold * 1.5],
+    [0, 1, 0]
+  )
+
+  const flyOut = (direction) => {
+    const toX = direction === "right" ? window.innerWidth : -window.innerWidth
+    const toRotate = direction === "right" ? 45 : -45
+    motionAnimate(x, toX, { type: "spring", stiffness: 500, damping: 40 })
+    motionAnimate(rotate, toRotate, {
+      type: "spring",
+      stiffness: 500,
+      damping: 40,
+      onComplete: () => {
+        direction === "right" ? onLike() : onSkip()
+      },
+    })
+  }
+
+  const handleDragEnd = (_e, info) => {
+    if (info.offset.x > threshold) {
+      flyOut("right")
+    } else if (info.offset.x < -threshold) {
+      flyOut("left")
+    } else {
+      motionAnimate(x, 0, { type: "spring", stiffness: 300, damping: 20 })
+      motionAnimate(y, yOffset, {
+        type: "spring",
+        stiffness: 300,
+        damping: 20,
+      })
+    }
+  }
 
   return (
-    <motion.div
-      className="absolute inset-x-0 top-0 flex justify-center items-center touch-none select-none"
-      style={{ zIndex: depth, scale, y: yOffset, rotate }}
-      drag={isTop ? "x" : false}
-      onDrag={(e, info) => {
-        if (isTop) rotate.set(info.offset.x / 10);
+    <Motion.div
+      style={{
+        x,
+        y,
+        rotate,
+        scale,
+        opacity,
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        zIndex: depth,
+        touchAction: "none",
       }}
+      initial={{ scale, y: yOffset }}
+      animate={{ scale, y: yOffset }}
+      exit={{ opacity: 0 }}
+      drag={isTop}
+      dragElastic={0.2}
+      dragMomentum={false}
       onDragEnd={handleDragEnd}
-      initial={{ opacity: 0, scale: scale * 0.9 }}
-      animate={{ opacity: 1, scale, y: yOffset }}
-      exit={{ opacity: 0, y: 50 }}
-      transition={{ type: "spring", stiffness: 250, damping: 25 }}
     >
       <BugCard bug={bug} />
-    </motion.div>
-  );
+    </Motion.div>
+  )
 }
-
-export default SwipeCard;

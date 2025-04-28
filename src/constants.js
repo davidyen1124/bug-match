@@ -1,0 +1,1 @@
+export const SWIPE_RATIO = 0.15; // 15 % of the viewport width
