@@ -55,7 +55,7 @@ export default function BugMatchApp() {
   const [expertise, setExpertise] = useState(() => storage.get("expertise", []))
   const [bugs, setBugs] = useState([])
   const [cursor, setCursor] = useState(0)
-  const [matches, setMatches] = useState(() => storage.get("matches", []))
+  const [matches, setMatches] = useState([])
   const [chatting, setChatting] = useState(null)
 
   useEffect(() => {
@@ -84,7 +84,6 @@ export default function BugMatchApp() {
     if (!bug) return
     const next = [...matches, { bug, status: "active" }]
     setMatches(next)
-    storage.set("matches", next)
     setCursor((c) => c + 1)
   }, [cursor, bugs, matches])
 
@@ -95,7 +94,6 @@ export default function BugMatchApp() {
       m.bug.id === bug.id ? { ...m, status: "resolved" } : m
     )
     setMatches(next)
-    storage.set("matches", next)
   }
 
   const current = bugs[cursor]
