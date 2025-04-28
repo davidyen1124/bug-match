@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { X, Send, CheckCircle } from "lucide-react";
-import { storage } from "@/utils/storage";
+import React, { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { X, Send, CheckCircle } from "lucide-react"
 
 /**
  * @param {{
@@ -11,18 +10,15 @@ import { storage } from "@/utils/storage";
  * }} props
  */
 function ChatWindow({ bug, onClose, onResolve }) {
-  const [messages, setMessages] = useState(() =>
-    storage.get(`chat:${bug.id}`, []),
-  );
-  const [draft, setDraft] = useState("");
+  const [messages, setMessages] = useState([])
+  const [draft, setDraft] = useState("")
 
   const send = () => {
-    if (!draft.trim()) return;
-    const next = [...messages, { from: "me", text: draft }];
-    setMessages(next);
-    storage.set(`chat:${bug.id}`, next);
-    setDraft("");
-  };
+    if (!draft.trim()) return
+    const next = [...messages, { from: "me", text: draft }]
+    setMessages(next)
+    setDraft("")
+  }
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur flex items-center justify-center z-50">
@@ -34,8 +30,8 @@ function ChatWindow({ bug, onClose, onResolve }) {
               size="sm"
               variant="success"
               onClick={() => {
-                onResolve(bug);
-                onClose();
+                onResolve(bug)
+                onClose()
               }}
             >
               <CheckCircle className="w-4 h-4 mr-1" /> Mark Fixed
@@ -77,7 +73,7 @@ function ChatWindow({ bug, onClose, onResolve }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ChatWindow;
+export default ChatWindow

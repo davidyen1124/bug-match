@@ -5,7 +5,6 @@ import Onboarding from "@/components/Onboarding"
 import CardStack from "@/components/CardStack"
 import ChatWindow from "@/components/ChatWindow"
 
-import { storage } from "@/utils/storage"
 import { generateBugImage } from "@/utils/generateBugImage"
 
 const sampleBugs = [
@@ -52,7 +51,7 @@ const sampleBugs = [
 ]
 
 export default function BugMatchApp() {
-  const [expertise, setExpertise] = useState(() => storage.get("expertise", []))
+  const [expertise, setExpertise] = useState([])
   const [bugs, setBugs] = useState([])
   const [cursor, setCursor] = useState(0)
   const [matches, setMatches] = useState([])
@@ -103,9 +102,7 @@ export default function BugMatchApp() {
   return (
     <div className="bg-gradient-to-br from-purple-100 to-blue-100 fixed inset-0 overflow-auto flex flex-col items-center p-4 gap-8">
       {/* Onboarding */}
-      {expertise.length === 0 && (
-        <Onboarding storage={storage} onDone={setExpertise} />
-      )}
+      {expertise.length === 0 && <Onboarding onDone={setExpertise} />}
 
       {/* Header */}
       <header className="text-center space-y-1">

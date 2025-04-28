@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 
-export default function Onboarding({ storage, onDone }) {
+export default function Onboarding({ onDone }) {
   const ALL_SKILLS = [
     "frontend",
     "backend",
@@ -16,9 +16,7 @@ export default function Onboarding({ storage, onDone }) {
     "c++",
   ]
 
-  const [selected, setSelected] = useState(
-    () => new Set(storage.get("expertise", []))
-  )
+  const [selected, setSelected] = useState(new Set())
 
   const toggle = (skill) =>
     setSelected((prev) => {
@@ -29,7 +27,6 @@ export default function Onboarding({ storage, onDone }) {
 
   const finish = () => {
     const arr = [...selected]
-    storage.set("expertise", arr)
     onDone(arr)
   }
 
