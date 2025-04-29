@@ -9,7 +9,7 @@ function BugCard({ bug }) {
         <img
           src={bug.image}
           alt={bug.name}
-          className="w-full h-60 flex-none object-cover rounded-xl"
+          className="w-full aspect-[4/3] object-cover rounded-xl"
         />
         <div className="flex flex-wrap gap-1 justify-center mt-1">
           {bug.tags.map((t) => (
@@ -19,7 +19,9 @@ function BugCard({ bug }) {
           ))}
         </div>
         <h2 className="text-xl font-semibold text-center">{bug.name}</h2>
-        <p className="text-center text-sm italic">“{bug.pickupLine}”</p>
+        <p className="text-center text-sm italic line-clamp-2">
+          “{bug.pickupLine}”
+        </p>
         <RadarPlot stats={bug.stats} />
       </CardContent>
     </Card>
