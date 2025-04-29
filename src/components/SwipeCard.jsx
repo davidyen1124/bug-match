@@ -68,19 +68,17 @@ export default function SwipeCard({
         width: "100%",
         height: "100%",
         zIndex: depth,
-        touchAction: "pan-y",
+        touchAction: "none",
       }}
       initial={{ scale, y: yOffset }}
       animate={{ scale, y: yOffset }}
       exit={{ opacity: 0 }}
-      drag={isTop ? "x" : false}
+      drag={true}
       dragElastic={0.2}
       dragMomentum={false}
       onDragEnd={handleDragEnd}
     >
-      <div className="h-full overflow-y-auto overscroll-contain scrollbar-none">
-        <BugCard bug={bug} />
-      </div>
+      <BugCard bug={bug} />
     </Motion.div>
   )
 }
