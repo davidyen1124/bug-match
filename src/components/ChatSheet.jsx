@@ -23,6 +23,12 @@ export default function ChatSheet({ activeMatches }) {
   const y = useMotionValue(Y_COLLAPSED)
   const [open, setOpen] = useState(false)
 
+  useEffect(() => {
+    if (!open) {
+      y.set(Y_COLLAPSED)
+    }
+  }, [Y_COLLAPSED, open, y])
+
   const snapTo = (openState) =>
     animate(y, openState ? Y_FULL : Y_COLLAPSED, {
       type: "spring",
