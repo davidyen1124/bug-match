@@ -45,7 +45,7 @@ export default function BugMatchApp() {
   const activeMatches = matches.filter((m) => m.status === "active")
 
   return (
-    <div className="bg-gradient-to-br from-purple-100 to-blue-100 fixed inset-0 overflow-auto flex flex-col items-center p-4 gap-8">
+    <div className="bg-gradient-to-br from-purple-100 to-blue-100 min-h-screen overflow-auto flex flex-col items-center p-4 pb-[100px] gap-8">
       {/* Onboarding */}
       {expertise.length === 0 && <Onboarding onDone={setExpertise} />}
 

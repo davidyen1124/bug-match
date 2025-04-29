@@ -73,7 +73,7 @@ export default function SwipeCard({
       initial={{ scale, y: yOffset }}
       animate={{ scale, y: yOffset }}
       exit={{ opacity: 0 }}
-      drag={isTop}
+      drag={isTop ? "x" : false}
       dragElastic={0.2}
       dragMomentum={false}
       onDragEnd={handleDragEnd}
