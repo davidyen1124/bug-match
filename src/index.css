@@ -118,16 +118,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-@layer utilities {
-  .scrollbar-none {
-    /* Firefox & Edge */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-
-    /* Chrome/Safari/Opera */
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-}
