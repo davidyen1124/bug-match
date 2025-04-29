@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react"
 import Onboarding from "@/components/Onboarding"
 import CardStack from "@/components/CardStack"
 import ChatSheet from "@/components/ChatSheet"
+import EmptyState from "@/components/EmptyState"
 import confetti from "canvas-confetti"
 
 export default function BugMatchApp() {
@@ -33,6 +34,11 @@ export default function BugMatchApp() {
     setCursor((c) => c + 1)
   }, [cursor, bugs])
 
+  const restart = useCallback(() => {
+    setCursor(0)
+    setMatches([])
+  }, [])
+
   const skip = useCallback(() => setCursor((c) => c + 1), [])
 
   const current = bugs[cursor]
@@ -50,14 +56,7 @@ export default function BugMatchApp() {
       <ChatSheet activeMatches={activeMatches} />
 
       {/* Empty-state after all bugs triaged */}
-      {!current && expertise.length > 0 && (
-        <p className="text-center text-lg font-medium">
-          Backlog obliterated
-          <br />
-          go touch grass while the build server sobs quietly into its build
-          logs. 🎉
-        </p>
-      )}
+      {!current && expertise.length > 0 && <EmptyState onRestart={restart} />}
     </div>
   )
 }
