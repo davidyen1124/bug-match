@@ -13,7 +13,12 @@ function CardStack({ bugs, cursor, onLike, onSkip }) {
   if (visibleCards.length === 0) return null
 
   return (
-    <div className="relative w-full max-w-md h-[520px] mb-[150px]">
+    <div
+      className="relative w-full max-w-md"
+      style={{
+        height: `calc(100dvh - 72px - 1rem)`,
+      }}
+    >
       <AnimatePresence initial={false}>
         {visibleCards
           .map((bug, index) => {

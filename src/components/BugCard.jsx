@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 function BugCard({ bug }) {
   return (
     <Card
-      className="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden select-none"
+      className="w-full max-w-md bg-white rounded-2xl overflow-hidden select-none"
       draggable={false}
     >
       <CardContent
